@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizzo Games Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #ef4444, #991b1b); /* Red 500 to Red 800 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom styles for logo in nav */
+        .nav-logo {
+            height: 40px; 
+            width: auto;
+        }
+        @media (min-width: 768px) { 
+            .nav-logo {
+                height: 50px; 
+            }
+        }
+        /* Hero logo for larger screens */
+        .hero-logo-container {
+            width: 280px; 
+            height: auto;
+            max-width: 90%; 
+        }
+        @media (min-width: 768px) {
+            .hero-logo-container {
+                width: 400px; 
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-sans antialiased selection:bg-red-600 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-neutral-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="https://i.imgur.com/n1cwxlm.png" alt="Rizzo Games Logo" class="nav-logo">
+                </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#about" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#projects" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="#contact" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-neutral-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-b border-neutral-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block hover:bg-neutral-800 hover:text-red-500 px-3 py-2 rounded-md text-base font-medium transition-colors">Home</a>
+                <a href="#about" class="block hover:bg-neutral-800 hover:text-red-500 px-3 py-2 rounded-md text-base font-medium transition-colors">About</a>
+                <a href="#projects" class="block hover:bg-neutral-800 hover:text-red-500 px-3 py-2 rounded-md text-base font-medium transition-colors">Projects</a>
+                <a href="#contact" class="block hover:bg-neutral-800 hover:text-red-500 px-3 py-2 rounded-md text-base font-medium transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                <span class="text-red-500 font-semibold tracking-wide uppercase text-sm">Unity Game Developer | Game Designer</span>
+                <h1 class="text-5xl md:text-7xl font-bold mt-4 mb-6 leading-tight">
+                    Angelo <span class="gradient-text">Castillo</span>
+                </h1>
+                <p class="text-neutral-400 text-lg mb-8 max-w-lg mx-auto md:mx-0">
+                    A Unity Game Developer that has the drive to learn and be better at Game Design and Development
+                </p>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#projects" class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-medium transition-all hover:scale-105 shadow-lg shadow-red-900/30">
+                        Try My Games
+                    </a>
+                    <a href="https://github.com/DFWRIZZO" target="_blank" class="bg-neutral-900 hover:bg-neutral-800 text-white px-8 py-3 rounded-full font-medium transition-all hover:scale-105 border border-neutral-700 flex items-center">
+                        <i class="fab fa-github mr-2"></i> GitHub
+                    </a>
+                    <a href="https://itch.io/profile/dfwrizzo" target="_blank" class="bg-neutral-900 hover:bg-neutral-800 text-white px-8 py-3 rounded-full font-medium transition-all hover:scale-105 border border-neutral-700 flex items-center">
+                        <i class="fab fa-itch-io"></i>  Itch.io
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center relative">
+                <!-- Decorative blobs -->
+                <div class="absolute w-72 h-72 bg-red-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+                <div class="absolute w-72 h-72 bg-neutral-700 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s; top: 40px; left: 80px;"></div>
+                
+                <div class="relative animate-float bg-neutral-900 p-8 rounded-2xl border border-neutral-800 shadow-2xl shadow-red-900/10 flex items-center justify-center">
+                    <img src="https://i.imgur.com/n1cwxlm.png" alt="Rizzo Games" class="hero-logo-container">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-neutral-900/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My Skills</h2>
+                <div class="w-20 h-1 bg-red-600 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-black rounded-xl border border-neutral-800 hover:border-red-600 transition-colors duration-300">
+                    <div class="w-16 h-16 bg-neutral-900 rounded-full flex items-center justify-center mx-auto mb-4 text-red-500 text-2xl border border-neutral-800">
+                        <i class="fas fa-dice-d20"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Game Design</h3>
+                    <p class="text-neutral-400">I love ideating and collaborating with fellow creative minds to create a new and innovative game.</p>
+                </div>
+                <div class="p-6 bg-black rounded-xl border border-neutral-800 hover:border-red-600 transition-colors duration-300">
+                    <div class="w-16 h-16 bg-neutral-900 rounded-full flex items-center justify-center mx-auto mb-4 text-red-500 text-2xl border border-neutral-800">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Programming</h3>
+                    <p class="text-neutral-400">I have extensive background knowledge regarding C# Unity programming.</p>
+                </div>
+                <div class="p-6 bg-black rounded-xl border border-neutral-800 hover:border-red-600 transition-colors duration-300">
+                    <div class="w-16 h-16 bg-neutral-900 rounded-full flex items-center justify-center mx-auto mb-4 text-red-500 text-2xl border border-neutral-800">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Leadership Skills</h3>
+                    <p class="text-neutral-400">I have the confidence to be a leader and the humbleness to be a better member of the team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My Games</h2>
+                <div class="w-20 h-1 bg-red-600 mx-auto rounded-full"></div>
+                <p class="mt-4 text-neutral-400">These are the games that I have made</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Game Card 1 -->
+                <div class="group bg-black rounded-xl overflow-hidden border border-neutral-800 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-neutral-800 to-red-900 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                        <i class="fas fa-skull text-5xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-red-500 transition-colors">Zombie Hunters</h3>
+                        <p class="text-neutral-400 text-sm mb-4">A 2D roguelike game that aims to survive against a horde of zombies.</p>
+                        <p class="text-neutral-400 text-sm mb-4">Kill zombies to obtain skills and buffs to help you survive longer.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">Unity</span>
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">C#</span>
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">2D</span>
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">Roguelike</span>
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">First Game Developed</span>
+                        </div>
+                        <a href="https://dfwrizzo.itch.io/zombie-hunters" target="_blank" class="text-red-500 hover:text-red-400 text-sm font-medium inline-flex items-center">
+                            Play Demo <i class="fas fa-play ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 2 -->
+                <div class="group bg-black rounded-xl overflow-hidden border border-neutral-800 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-red-900 to-black flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                        <i class="fas fa-fire text-5xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-red-500 transition-colors">Purgatory</h3>
+                        <p class="text-neutral-400 text-sm mb-4">A 3D speedrunning game that lets the player shoot the enemies while implementing complex movement.</p>
+                        <p class="text-neutral-400 text-sm mb-4">This was the first 3D game I have made in Unity.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">Unity</span>
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">C#</span>
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">3D</span>
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">2D Assets</span>
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">Speedrun</span>
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">Shooter</span>
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">Advance Movement</span>
+                        </div>
+                        <a href="https://dfwrizzo.itch.io/purgatory" target="_blank" class="text-red-500 hover:text-red-400 text-sm font-medium inline-flex items-center">
+                            Play Demo <i class="fas fa-play ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 3 -->
+                <div class="group bg-black rounded-xl overflow-hidden border border-neutral-800 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-neutral-700 to-neutral-900 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                        <i class="fas fa-file-code text-5xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-red-500 transition-colors">CodeQuest</h3>
+                        <p class="text-neutral-400 text-sm mb-4">A 3D Puzzle Game that mixes fun Unity based puzzles with electrifying combat mechanics.</p>
+                        <p class="text-neutral-400 text-sm mb-4">This was our Capstone Project, I led and spearheaded this project with 3 of us.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">Unity</span>
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">C#</span>
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">3D</span>
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">Puzzle</span>
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">Melee Combat</span>
+                            <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-xs rounded-full text-red-400">Story Driven</span>
+                        </div>
+                        <a href="https://dfwrizzo.itch.io/codequest" target="_blank" class="text-red-500 hover:text-red-400 text-sm font-medium inline-flex items-center">
+                            Play Demo <i class="fas fa-play ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-neutral-900/30">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+            <p class="text-neutral-400 mb-10">I want to learn more from other creative people and to become a better version of my self. My eagerness to surpass my current capabilities whilst being of help to the team; along with my grit to overcome every challenge are my biggest strength.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                <a href="mailto:castillo.angelo2024@gmail.com" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-bold transition-colors shadow-lg shadow-red-900/20 flex items-center">
+                    <i class="fas fa-envelope mr-2"></i> Send me an email!
+                </a>
+            </div>
+
+            <div class="mt-16 flex justify-center space-x-8 text-3xl text-neutral-500">
+                <!-- Added target="_blank" to all links below -->
+                <a href="https://github.com/DFWRIZZO" target="_blank" class="hover:text-red-500 transition-colors"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/angelo-castillo-6483a0299/" target="_blank" class="hover:text-red-500 transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/angelo.castillo.285274/" target="_blank" class="hover:text-red-500 transition-colors"><i class="fab fa-facebook"></i></a>
+                <a href="https://itch.io/profile/dfwrizzo" target="_blank" class="hover:text-red-500 transition-colors"><i class="fab fa-itch-io"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-black border-t border-neutral-800 text-center text-neutral-500 text-sm">
+        <p id="year-text"></p>
+        <p class="mt-2">Built determination and GitHub Pages :P</p>
+    </footer>
+
+    <script>
+        // Update Year
+        document.getElementById('year-text').innerHTML = `&copy; ${new Date().getFullYear()} Rizzo Games. All rights reserved.`;
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                menu.classList.add('hidden');
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
