@@ -7,7 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Custom Animations */
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
@@ -17,7 +16,7 @@
             animation: float 3s ease-in-out infinite;
         }
         .gradient-text {
-            background: linear-gradient(to right, #ef4444, #991b1b); /* Red 500 to Red 800 */
+            background: linear-gradient(to right, #ef4444, #991b1b); 
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -31,7 +30,6 @@
                 height: 50px; 
             }
         }
-        /* Hero logo for larger screens */
         .hero-logo-container {
             width: 280px; 
             height: auto;
@@ -46,15 +44,13 @@
 </head>
 <body class="bg-black text-white font-sans antialiased selection:bg-red-600 selection:text-white">
 
-    <!-- Navigation -->
+
     <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-neutral-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <!-- Logo -->
                 <div class="flex-shrink-0">
                     <img src="https://i.imgur.com/n1cwxlm.png" alt="Rizzo Games Logo" class="nav-logo">
                 </div>
-                <!-- Desktop Navigation -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <a href="#home" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
@@ -63,7 +59,6 @@
                         <a href="#contact" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
                     </div>
                 </div>
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden">
                     <button id="mobile-menu-btn" class="text-neutral-300 hover:text-white focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
@@ -71,7 +66,6 @@
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-b border-neutral-800">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" class="block hover:bg-neutral-800 hover:text-red-500 px-3 py-2 rounded-md text-base font-medium transition-colors">Home</a>
@@ -82,7 +76,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+
     <section id="home" class="min-h-screen flex items-center justify-center pt-16">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
@@ -117,7 +111,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="py-20 bg-neutral-900/30">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -150,7 +143,6 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="py-20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -159,7 +151,6 @@
                 <p class="mt-4 text-neutral-400">These are the games that I have made</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Game Card 1 -->
                 <div class="group bg-black rounded-xl overflow-hidden border border-neutral-800 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300">
                     <div class="h-48 bg-gradient-to-br from-neutral-800 to-red-900 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
                         <i class="fas fa-skull text-5xl text-white opacity-80"></i>
@@ -181,7 +172,6 @@
                     </div>
                 </div>
 
-                <!-- Game Card 2 -->
                 <div class="group bg-black rounded-xl overflow-hidden border border-neutral-800 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300">
                     <div class="h-48 bg-gradient-to-br from-red-900 to-black flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
                         <i class="fas fa-fire text-5xl text-white opacity-80"></i>
@@ -205,7 +195,6 @@
                     </div>
                 </div>
 
-                <!-- Game Card 3 -->
                 <div class="group bg-black rounded-xl overflow-hidden border border-neutral-800 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300">
                     <div class="h-48 bg-gradient-to-br from-neutral-700 to-neutral-900 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
                         <i class="fas fa-file-code text-5xl text-white opacity-80"></i>
@@ -231,7 +220,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-20 bg-neutral-900/30">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
@@ -241,9 +229,7 @@
                 <a href="mailto:castillo.angelo2024@gmail.com" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-bold transition-colors shadow-lg shadow-red-900/20 flex items-center">
                     <i class="fas fa-envelope mr-2"></i> Send me an email!
                 </a>
-                
-                <!-- Resume Download Button -->
-                <!-- Make sure to upload a file named 'resume.pdf' to your repository -->
+
                 <a href="Angelo Nicholas Castillo - Resume.pdf" download class="bg-neutral-900 hover:bg-neutral-800 text-white px-8 py-4 rounded-lg font-bold transition-colors shadow-lg shadow-red-900/20 flex items-center border border-neutral-700">
                     <i class="fas fa-file-pdf mr-2"></i> Download Resume
                 </a>
@@ -258,17 +244,15 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-8 bg-black border-t border-neutral-800 text-center text-neutral-500 text-sm">
         <p id="year-text"></p>
         <p class="mt-2">Built with love and determination + GitHub Pages :P</p>
     </footer>
 
     <script>
-        // Update Year
+
         document.getElementById('year-text').innerHTML = `&copy; ${new Date().getFullYear()} Rizzo Games. All rights reserved.`;
 
-        // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
 
@@ -276,7 +260,7 @@
             menu.classList.toggle('hidden');
         });
 
-        // Smooth scrolling
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
