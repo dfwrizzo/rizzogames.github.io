@@ -16,11 +16,10 @@
             animation: float 3s ease-in-out infinite;
         }
         .gradient-text {
-            background: linear-gradient(to right, #ef4444, #991b1b); 
+            background: linear-gradient(to right, #ef4444, #991b1b);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        /* Custom styles for logo in nav */
         .nav-logo {
             height: 40px; 
             width: auto;
@@ -43,7 +42,6 @@
     </style>
 </head>
 <body class="bg-black text-white font-sans antialiased selection:bg-red-600 selection:text-white">
-
 
     <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-neutral-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,7 +73,6 @@
             </div>
         </div>
     </nav>
-
 
     <section id="home" class="min-h-screen flex items-center justify-center pt-16">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
@@ -151,11 +148,20 @@
                 <p class="mt-4 text-neutral-400">These are the games that I have made</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="group bg-black rounded-xl overflow-hidden border border-neutral-800 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300">
-                    <div class="h-48 bg-gradient-to-br from-neutral-800 to-red-900 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                        <i class="fas fa-skull text-5xl text-white opacity-80"></i>
+                <!-- Game Card 1 -->
+                <div class="group bg-black rounded-xl overflow-hidden border border-neutral-800 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300 game-card">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="w-full h-full group-hover:scale-105 transition-transform duration-500 relative">
+                            <div class="absolute inset-0 bg-gradient-to-br from-neutral-800 to-red-900 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0 z-10">
+                                <i class="fas fa-skull text-5xl text-white opacity-80"></i>
+                            </div>
+                            <video class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" muted loop playsinline>
+                                <source src="videos/zombie_hunters.mp4" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
-                    <div class="p-6">
+
+                    <div class="p-6 relative z-20 bg-black">
                         <h3 class="text-xl font-bold mb-2 group-hover:text-red-500 transition-colors">Zombie Hunters</h3>
                         <p class="text-neutral-400 text-sm mb-4">A 2D roguelike game that aims to survive against a horde of zombies.</p>
                         <p class="text-neutral-400 text-sm mb-4">Kill zombies to obtain skills and buffs to help you survive longer.</p>
@@ -172,11 +178,21 @@
                     </div>
                 </div>
 
-                <div class="group bg-black rounded-xl overflow-hidden border border-neutral-800 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300">
-                    <div class="h-48 bg-gradient-to-br from-red-900 to-black flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                        <i class="fas fa-fire text-5xl text-white opacity-80"></i>
+                <!-- Game Card 2 -->
+                <div class="group bg-black rounded-xl overflow-hidden border border-neutral-800 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300 game-card">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="w-full h-full group-hover:scale-105 transition-transform duration-500 relative">
+                            <div class="absolute inset-0 bg-gradient-to-br from-red-900 to-black flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0 z-10">
+                                <i class="fas fa-fire text-5xl text-white opacity-80"></i>
+                            </div>
+                            <!-- Video Content -->
+                            <video class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" muted loop playsinline>
+                                <source src="videos/purgatory.mp4" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
-                    <div class="p-6">
+
+                    <div class="p-6 relative z-20 bg-black">
                         <h3 class="text-xl font-bold mb-2 group-hover:text-red-500 transition-colors">Purgatory</h3>
                         <p class="text-neutral-400 text-sm mb-4">A 3D speedrunning game that lets the player shoot the enemies while implementing complex movement.</p>
                         <p class="text-neutral-400 text-sm mb-4">This was the first 3D game I have made in Unity.</p>
@@ -195,11 +211,20 @@
                     </div>
                 </div>
 
-                <div class="group bg-black rounded-xl overflow-hidden border border-neutral-800 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300">
-                    <div class="h-48 bg-gradient-to-br from-neutral-700 to-neutral-900 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                        <i class="fas fa-file-code text-5xl text-white opacity-80"></i>
+                <!-- Game Card 3 -->
+                <div class="group bg-black rounded-xl overflow-hidden border border-neutral-800 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300 game-card">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="w-full h-full group-hover:scale-105 transition-transform duration-500 relative">
+                            <div class="absolute inset-0 bg-gradient-to-br from-neutral-700 to-neutral-900 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0 z-10">
+                                <i class="fas fa-file-code text-5xl text-white opacity-80"></i>
+                            </div>
+                            <video class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" muted loop playsinline>
+                                <source src="videos/codequest.mp4" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
-                    <div class="p-6">
+
+                    <div class="p-6 relative z-20 bg-black">
                         <h3 class="text-xl font-bold mb-2 group-hover:text-red-500 transition-colors">CodeQuest</h3>
                         <p class="text-neutral-400 text-sm mb-4">A 3D Puzzle Game that mixes fun Unity based puzzles with electrifying combat mechanics.</p>
                         <p class="text-neutral-400 text-sm mb-4">This was our Capstone Project, I led and spearheaded this project with 3 of us.</p>
@@ -229,7 +254,7 @@
                 <a href="mailto:castillo.angelo2024@gmail.com" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-bold transition-colors shadow-lg shadow-red-900/20 flex items-center">
                     <i class="fas fa-envelope mr-2"></i> Send me an email!
                 </a>
-
+                
                 <a href="Angelo Nicholas Castillo - Resume.pdf" download class="bg-neutral-900 hover:bg-neutral-800 text-white px-8 py-4 rounded-lg font-bold transition-colors shadow-lg shadow-red-900/20 flex items-center border border-neutral-700">
                     <i class="fas fa-file-pdf mr-2"></i> Download Resume
                 </a>
@@ -250,7 +275,6 @@
     </footer>
 
     <script>
-
         document.getElementById('year-text').innerHTML = `&copy; ${new Date().getFullYear()} Rizzo Games. All rights reserved.`;
 
         const btn = document.getElementById('mobile-menu-btn');
@@ -260,7 +284,6 @@
             menu.classList.toggle('hidden');
         });
 
-
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -269,6 +292,25 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        const gameCards = document.querySelectorAll('.game-card');
+
+        gameCards.forEach(card => {
+            const video = card.querySelector('video');
+            if(video) {
+                // When mouse enters the card, play video
+                card.addEventListener('mouseenter', () => {
+                    // We catch the error just in case the browser blocks auto-play or file not found
+                    video.play().catch(e => console.log("Video play failed:", e));
+                });
+                
+                // When mouse leaves, pause and reset
+                card.addEventListener('mouseleave', () => {
+                    video.pause();
+                    video.currentTime = 0; // Reset to start
+                });
+            }
         });
     </script>
 </body>
